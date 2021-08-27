@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   header{
-    background-color: black;
+    background-color: #008764;
     nav{
       width: 80%;
       min-height: 10vh;
@@ -41,7 +41,7 @@ justify-content: flex-end;
   margin-right: 1rem;
 }
 li{
-  font-size: 3rem;
+  margin-left: 1rem;
   a{
     color: white;
     text-decoration: none; 
@@ -49,8 +49,13 @@ li{
     transition: .2s ease-in-out;
   }
   a:hover{
-    color: rgb(158, 153, 153); 
+    
+  color: #F18A00; 
     transition: .2s ease-in-out;
+  }
+  span{
+    
+  font-size: 1.7rem;
   }
 }
 }
@@ -192,11 +197,59 @@ li{
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   font-size: 5rem;
+  padding: 2rem 0;
+  button{
+    padding: .7rem 1rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    background-color: rgb(14, 95, 105);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+  }
+  button:hover{
+    background-color: rgb(16, 116, 129);
+    transition: .2s ease-in-out;
+  }
 }
-
+.history-screen{
+  min-height: 90vh;
+  width: 100%;
+  display: grid;
+  gap:1rem;
+  grid-auto-rows: 0rem;
+  grid-template-columns: repeat(auto-fill, minmax(  25rem, 1fr));
+  padding: 2rem 0;
+  h1{
+    font-size: 2rem;
+    font-weight: bold;
+  }
+}
+.order{
+  width: 100%;
+  min-height: 17vh;
+  padding: 1rem ;
+  border: .1rem solid black;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.order-items{
+  width: 100%;
+  min-height: 10vh;
+  h1{
+    font-size: 2rem;
+  }
+  .order-item{
+    display: flex;
+    flex-direction: column;
+  }
+}
 
 @media screen and (max-width: 792px){
   .pizza-options{
@@ -269,4 +322,16 @@ li{
     }
   }
   }
+  .nav-links{
+    .fas{
+      font-size: 1.8rem;
+    }
+    span{
+      display: none;
+    }
+  }
+ .history-screen{
+   display: flex;
+   flex-direction: column;
+ }
 }

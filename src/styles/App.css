@@ -10,7 +10,7 @@
 }
 
 .main-wrapper header {
-  background-color: black;
+  background-color: #008764;
 }
 
 .main-wrapper header nav {
@@ -67,7 +67,7 @@
 }
 
 .nav-links li {
-  font-size: 3rem;
+  margin-left: 1rem;
 }
 
 .nav-links li a {
@@ -79,9 +79,13 @@
 }
 
 .nav-links li a:hover {
-  color: #9e9999;
+  color: #F18A00;
   -webkit-transition: .2s ease-in-out;
   transition: .2s ease-in-out;
+}
+
+.nav-links li span {
+  font-size: 1.7rem;
 }
 
 .main-section {
@@ -316,13 +320,84 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 5rem;
+  padding: 2rem 0;
+}
+
+.total button {
+  padding: .7rem 1rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  background-color: #0e5f69;
+  color: white;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+.total button:hover {
+  background-color: #107481;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+.history-screen {
+  min-height: 90vh;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  gap: 1rem;
+  grid-auto-rows: 0rem;
+  -ms-grid-columns: (minmax(25rem, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+  padding: 2rem 0;
+}
+
+.history-screen h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.order {
+  width: 100%;
+  min-height: 17vh;
+  padding: 1rem;
+  border: .1rem solid black;
+  border-radius: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 5rem;
+}
+
+.order-items {
+  width: 100%;
+  min-height: 10vh;
+}
+
+.order-items h1 {
+  font-size: 2rem;
+}
+
+.order-items .order-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 @media screen and (max-width: 792px) {
@@ -414,6 +489,21 @@
   }
   .item-details .qty span {
     font-size: 2rem;
+  }
+  .nav-links .fas {
+    font-size: 1.8rem;
+  }
+  .nav-links span {
+    display: none;
+  }
+  .history-screen {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 /*# sourceMappingURL=App.css.map */

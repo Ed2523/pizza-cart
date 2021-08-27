@@ -1,9 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './styles/App.css';
 import Header from './components/Header'
-import HomeScreen from './screens/HomeScreen';
-import CartScreen from './screens/CartScreen';
+import HomeScreen from './screens/HomeScreen'
+import CartScreen from './screens/CartScreen'
+import HistoryScreen from './screens/HistoryScreen'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
+
 
 
 function App() {
@@ -11,16 +13,14 @@ function App() {
   const [qtyVeggie, setQtyVeggie] = useState(0);
   const [qtyTotal, setQtyTotal] = useState(0)
   const [pizzasInCart, setPizzasInCart] = useState([])
+  const [orders, setOrders] = useState([])
+
 
   return (
     <Router>
       <div className="main-wrapper">
         <Header />
         <div className="main-section">
-
-
-
-
           <Route path='/' render={props =>
             <HomeScreen
               qtyMeat={qtyMeat}
@@ -44,6 +44,19 @@ function App() {
               setPizzasInCart={setPizzasInCart}
               qtyTotal={qtyTotal}
               setQtyTotal={setQtyTotal}
+              orders={orders}
+              setOrders={setOrders}
+            />
+          }
+            exact
+          />
+
+          <Route path='/cart/history' render={props =>
+            <HistoryScreen
+
+              orders={orders}
+              setOrders={setOrders}
+
             />
           }
           />
