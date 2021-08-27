@@ -1,12 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 const Header = () => {
     return (
         <header>
             <nav >
-                <h1 className='title'>Pizza</h1>
+                <Link to={'/'} className='title'>Pizza</Link>
                 <ul className='nav-links'>
-                    <li> <i className="fas fa-shopping-cart"></i><a href='./' >CART</a></li>
-
+                    <li><Link to={'/cart'} ><i className="fas fa-shopping-cart"></i>CART</Link></li>
                 </ul>
             </nav>
         </header>

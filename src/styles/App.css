@@ -63,6 +63,7 @@
 .nav-links .fas {
   font-size: 2rem;
   color: white;
+  margin-right: 1rem;
 }
 
 .nav-links li {
@@ -116,7 +117,6 @@
 }
 
 .pizza-options .pizza {
-  height: 70%;
   width: 40%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -137,6 +137,7 @@
 
 .pizza-options .pizza h1 {
   font-size: 2rem;
+  cursor: default;
 }
 
 .pizza-options .pizza img {
@@ -145,6 +146,7 @@
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 1rem;
+  cursor: pointer;
 }
 
 .pizza-options .pizza .meat {
@@ -155,16 +157,177 @@
   color: green;
 }
 
+.pizza-options .pizza .qty {
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pizza-options .pizza .qty span {
+  font-size: 2rem;
+}
+
 .pizza-options .pizza:hover {
-  height: 72%;
   width: 42%;
   -webkit-transition: .2s ease-in-out;
   transition: .2s ease-in-out;
 }
 
+.cart-section {
+  min-height: 90vh;
+  width: 80%;
+  margin: auto;
+  font-size: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cart-items {
+  width: 70%;
+  height: 60vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.cart-item {
+  width: 80%;
+  height: 23vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem .8rem;
+  border: .05rem solid black;
+  border-radius: 1rem;
+}
+
+.image-container {
+  width: 40%;
+  height: 20vh;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 1rem;
+}
+
+.item-details {
+  width: 60%;
+  height: 20vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2rem;
+}
+
+.item-details .description {
+  text-align: center;
+  padding: 0 .8rem;
+}
+
+.item-details .qty {
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: bold;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2rem;
+}
+
+.item-details .qty button {
+  padding: .1rem .5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #0e5f69;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.cart-checkout {
+  width: 30%;
+  height: 60vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.total {
+  width: 90%;
+  height: 40vh;
+  border: .1rem solid black;
+  border-radius: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 5rem;
+}
+
 @media screen and (max-width: 792px) {
   .pizza-options {
-    height: 40rem;
+    height: 75vh;
     width: 90%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -173,7 +336,84 @@
   }
   .pizza-options .pizza {
     height: 40%;
+    width: 98%;
+  }
+  .pizza-options .pizza:hover {
     width: 100%;
+  }
+  .description {
+    font-size: .5rem;
+  }
+  .cart-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 70vw;
+    padding: 1rem 0;
+  }
+  .cart-checkout {
+    width: 100%;
+    height: 30vh;
+  }
+  .total {
+    height: 25vh;
+    font-size: 5rem;
+  }
+  .cart-items {
+    width: 100%;
+    min-height: 85vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .cart-item {
+    width: 100%;
+    min-height: 40vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .image-container {
+    width: 100%;
+    height: 20vh;
+  }
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .item-details {
+    width: 100%;
+  }
+  .item-details .description {
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+  .item-details .qty {
+    width: 40%;
+  }
+  .item-details .qty button {
+    padding: .5rem 1rem;
+    font-size: 1.5rem;
+  }
+  .item-details .qty span {
+    font-size: 2rem;
   }
 }
 /*# sourceMappingURL=App.css.map */
